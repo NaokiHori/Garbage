@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<Xdmf Version="3.0">
+  <Domain Name="MyDomain">
+    <Grid Name="MyGrid" GridType="Uniform">
+      <Topology Name="MyTopology" TopologyType="2DCORECTMesh" NumberOfElements="1024 1024"/>
+      <Geometry Name="MyGeometry" GeometryType="ORIGIN_DXDY">
+        <DataItem Format="XML" Dimensions="2">
+          0.0030680 0.0030680
+        </DataItem>
+        <DataItem Format="XML" Dimensions="2">
+          0.0061359 0.0061359
+        </DataItem>
+      </Geometry>
+      <Attribute Name="u" Center="Node">
+        <DataItem Format="HDF" Dimensions="1024 1024">
+          sample.h5:/u
+        </DataItem>
+      </Attribute>
+      <Attribute Name="v" Center="Node">
+        <DataItem Format="HDF" Dimensions="1024 1024">
+          sample.h5:/v
+        </DataItem>
+      </Attribute>
+    </Grid>
+  </Domain>
+</Xdmf>
